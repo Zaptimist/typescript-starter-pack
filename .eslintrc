@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "no-console": "error"
+      }
+    },
+    {
+      "files": ["*.js"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}
